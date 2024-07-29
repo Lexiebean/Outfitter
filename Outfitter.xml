@@ -656,6 +656,40 @@
 									</OnLeave>
 								</Scripts>
 							</CheckButton>
+							<CheckButton name="OutfitterShowCurrentOutfit" inherits="OptionsCheckButtonTemplate">
+								<Anchors>
+									<Anchor point="TOPLEFT" relativeTo="OutfitterShowHotkeyMessages" relativePoint="BOTTOMLEFT">
+										<Offset>
+											<AbsDimension x="0" y="-10"/>
+										</Offset>
+									</Anchor>
+								</Anchors>
+								<Scripts>
+									<OnLoad>
+										getglobal(this:GetName().."Text"):SetText(Outfitter_cShowCurrentOutfit);
+									</OnLoad>
+									<OnClick>
+										Outfitter_SetShowCurrentOutfit(this:GetChecked());
+									</OnClick>
+								</Scripts>
+							</CheckButton>
+							<CheckButton name="OutfitterHideDisabledOutfits" inherits="OptionsCheckButtonTemplate">
+								<Anchors>
+									<Anchor point="TOPLEFT" relativeTo="OutfitterShowCurrentOutfit" relativePoint="BOTTOMLEFT">
+										<Offset>
+											<AbsDimension x="0" y="-10"/>
+										</Offset>
+									</Anchor>
+								</Anchors>
+								<Scripts>
+									<OnLoad>
+										getglobal(this:GetName().."Text"):SetText(Outfitter_cHideDisabledOutfits);
+									</OnLoad>
+									<OnClick>
+										Outfitter_SetHideDisabledOutfits(this:GetChecked());
+									</OnClick>
+								</Scripts>
+							</CheckButton>
 						</Frames>
 						<Scripts>
 							<OnLoad>

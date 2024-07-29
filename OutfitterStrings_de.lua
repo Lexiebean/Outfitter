@@ -1,6 +1,6 @@
 if GetLocale() == "deDE" then
 	Outfitter_cTitle = "Outfitter";
-	Outfitter_cTitleVersion = Outfitter_cTitle.." "..Outfitter_cVersion;
+	Outfitter_cTitleVersion = Outfitter_cTitle .. " " .. Outfitter_cVersion;
 
 	Outfitter_cNameLabel = "Name:";
 	Outfitter_cCreateUsingTitle = "Optimieren f\195\188r:";
@@ -36,7 +36,9 @@ if GetLocale() == "deDE" then
 	Outfitter_cRidingOutfit = "Reiten";
 	Outfitter_cDiningOutfit = "Ausruhen";
 	Outfitter_cBattlegroundOutfit = "Schlachtfeld";
-	
+	Outfitter_cBossOutfit = "Boss Mobs";
+	Outfitter_cTrashOutfit = "Trash Mobs";
+
 	Outfitter_cABOutfit = "Schlachtfeld: Arathibecken";
 	Outfitter_cAVOutfit = "Schlachtfeld: Alteractal";
 	Outfitter_cWSGOutfit = "Schlachtfeld: Warsongschlucht";
@@ -85,75 +87,74 @@ if GetLocale() == "deDE" then
 
 	Outfitter_cCarrotOnAStick = "Karotte am Stiel";
 
-	Outfitter_cItemStatFormats =
-	{
-		{Format = "Ausdauer %+(%d+)", Types = {"Stamina"}},
-		{Format = "Intelligenz %+(%d+)", Types = {"Intellect"}},
-		{Format = "Beweglichkeit %+(%d+)", Types = {"Agility"}},
-		{Format = "St\195\164rke %+(%d+)", Types = {"Strength"}},
-		{Format = "Willenskraft %+(%d+)", Types = {"Spirit"}},
-		{Format = "R\195\188stung %+(%d+)", Types = {"Armor"}},
-		{Format = "Verteidigung %+(%d+)", Types = {"Defense"}},
-		{Format = "Anlegen: Verteidigung %+(%d+)", Types = {"Defense"}},
-		
-		{Format = "%+(%d+) Ausdauer", Types = {"Stamina"}},
-		{Format = "%+(%d+) Intelligenz", Types = {"Intellect"}},
-		{Format = "%+(%d+) Beweglichkeit", Types = {"Agility"}},
-		{Format = "%+(%d+) St\195\164rke", Types = {"Strength"}},
-		{Format = "%+(%d+) Willenskraft", Types = {"Spirit"}},
-		{Format = "(%d+) R\195\188stung", Types = {"Armor"}},
-		{Format = "%+(%d+) Angriffskraft", Types = {"Attack"}},
-		
-		{Format = "Mana %+(%d+)", Types = {"Mana"}},
-		{Format = "Gesundheit %+(%d+)", Types = {"Health"}},
-		
-		{Format = "%+(%d+) Mana alle 5 Sek.", Types = {"ManaRegen"}},
-		{Format = "Stellt alle 5 Sek. (%d+) Punkt(e) Mana wieder her.", Types = {"ManaRegen"}},
-		
-		{Format = "%+(%d+) Gesundheit alle 5 Sek.", Types = {"HealthRegen"}},
-		{Format = "Stellt alle 5 Sek. (%d+) Punkt(e) Gesundheit wieder her.", Types = {"HealthRegen"}},
-		
-		{Format = "Schwache Reittemposteigerung", Value = 3, Types = {"Riding"}},
-		{Format = "Mithrilsporen", Value = 3, Types = {"Riding"}},
-		
-		{Format = "%+(%d+) Feuerwiderstand", Types = {"FireResist"}},
-		{Format = "%+(%d+) Naturwiderstand", Types = {"NatureResist"}},
-		{Format = "%+(%d+) Frostwiderstand", Types = {"FrostResist"}},
-		{Format = "%+(%d+) Schattenwiderstand", Types = {"ShadowResist"}},
-		{Format = "%+(%d+) Arkanwiderstand", Types = {"ArcaneResist"}},
-		{Format = "%+(%d+) Alle Widerst\195\164nde", Types = {"FireResist", "NatureResist", "FrostResist", "ShadowResist", "ArcaneResist"}},
-		
-		{Format = "Waffenschaden %+(%d+)", Types = {"MeleeDmg"}},
-		{Format = "Erh\195\182ht Eure Trefferchance um (%d+)%%", Types = {"MeleeHit"}},
-		{Format = "Erh\195\182ht Eure Chance, einen kritischen Schlag zu erzielen, um (%d+)%%", Types = {"MeleeCrit"}},
-		{Format = "Erh\195\182ht Eure Chance, einem Angriff auszuweichen, um (%d+)%%", Types = {"Dodge"}},
-		{Format = "Schaden %+(%d+)", Types = {"MeleeDmg"}},
-		{Format = "(%d+) Blocken", Types = {"BlockAmount"}},
-		
-		{Format = "Erh\195\182ht Angeln um %+(%d+)%.", Types = {"Fishing"}},
-		{Format = "Angeln %+(%d+)", Types = {"Fishing"}},
-		{Format = "Kr\195\164uterkunde %+(%d+)", Types = {"Herbalism"}},
-		{Format = "Bergbau %+(%d+)", Types = {"Mining"}},
-		{Format = "K\195\188rschnerei %+(%d+)", Types = {"Skinning"}},
-		
-		{Format = "Erh\195\182ht Eure Chance, einen kritischen Treffer durch Zauber zu erzielen, um (%d+)%%", Types = {"SpellCrit"}},
-		{Format = "Improves your chance to hit with spells by (%d+)%%", Types = {"SpellHit"}},
-		{Format = "Erh\195\182ht durch Zauber und magische Effekte zugef\195\188gten Schaden und Heilung um bis zu (%d+)", Types = {"SpellDmg", "ShadowDmg", "FireDmg", "FrostDmg", "ArcaneDmg", "NatureDmg", "Healing"}},
-		{Format = "Erh\195\182ht durch Zauber und Effekte verursachte Heilung um bis zu (%d+)", Types = {"Healing"}},
-		{Format = "Heilzauber %+(%d+)", Types = {"Healing"}},
-		{Format = "%+(%d+) Heilzauber", Types = {"Healing"}},
-		
-		{Format = "%+(%d+) Feuerzauberschaden", Types = {"FireDmg"}},
-		{Format = "%+(%d+) Schattenzauberschaden", Types = {"ShadowDmg"}},
-		{Format = "%+(%d+) Frostzauberschaden", Types = {"FrostDmg"}},
-		{Format = "%+(%d+) Arkanzauberschaden", Types = {"ArcaneDmg"}},
-		{Format = "%+(%d+) Naturzauberschaden", Types = {"NatureDmg"}},
-		
-		{Format = "Increases damage done by Fire spells and effects by up to (%d+)", Types = {"FireDmg"}},
-		{Format = "Increases damage done by Shadow spells and effects by up to (%d+)", Types = {"ShadowDmg"}},
-		{Format = "Increases damage done by Frost spells and effects by up to (%d+)", Types = {"FrostDmg"}},
-		{Format = "Increases damage done by Arcane spells and effects by up to (%d+)", Types = {"ArcaneDmg"}},
-		{Format = "Increases damage done by Nature spells and effects by up to (%d+)", Types = {"NatureDmg"}},
+	Outfitter_cItemStatFormats = {
+		{ Format = "Ausdauer %+(%d+)", Types = { "Stamina" } },
+		{ Format = "Intelligenz %+(%d+)", Types = { "Intellect" } },
+		{ Format = "Beweglichkeit %+(%d+)", Types = { "Agility" } },
+		{ Format = "St\195\164rke %+(%d+)", Types = { "Strength" } },
+		{ Format = "Willenskraft %+(%d+)", Types = { "Spirit" } },
+		{ Format = "R\195\188stung %+(%d+)", Types = { "Armor" } },
+		{ Format = "Verteidigung %+(%d+)", Types = { "Defense" } },
+		{ Format = "Anlegen: Verteidigung %+(%d+)", Types = { "Defense" } },
+
+		{ Format = "%+(%d+) Ausdauer", Types = { "Stamina" } },
+		{ Format = "%+(%d+) Intelligenz", Types = { "Intellect" } },
+		{ Format = "%+(%d+) Beweglichkeit", Types = { "Agility" } },
+		{ Format = "%+(%d+) St\195\164rke", Types = { "Strength" } },
+		{ Format = "%+(%d+) Willenskraft", Types = { "Spirit" } },
+		{ Format = "(%d+) R\195\188stung", Types = { "Armor" } },
+		{ Format = "%+(%d+) Angriffskraft", Types = { "Attack" } },
+
+		{ Format = "Mana %+(%d+)", Types = { "Mana" } },
+		{ Format = "Gesundheit %+(%d+)", Types = { "Health" } },
+
+		{ Format = "%+(%d+) Mana alle 5 Sek.", Types = { "ManaRegen" } },
+		{ Format = "Stellt alle 5 Sek. (%d+) Punkt(e) Mana wieder her.", Types = { "ManaRegen" } },
+
+		{ Format = "%+(%d+) Gesundheit alle 5 Sek.", Types = { "HealthRegen" } },
+		{ Format = "Stellt alle 5 Sek. (%d+) Punkt(e) Gesundheit wieder her.", Types = { "HealthRegen" } },
+
+		{ Format = "Schwache Reittemposteigerung", Value = 3, Types = { "Riding" } },
+		{ Format = "Mithrilsporen", Value = 3, Types = { "Riding" } },
+
+		{ Format = "%+(%d+) Feuerwiderstand", Types = { "FireResist" } },
+		{ Format = "%+(%d+) Naturwiderstand", Types = { "NatureResist" } },
+		{ Format = "%+(%d+) Frostwiderstand", Types = { "FrostResist" } },
+		{ Format = "%+(%d+) Schattenwiderstand", Types = { "ShadowResist" } },
+		{ Format = "%+(%d+) Arkanwiderstand", Types = { "ArcaneResist" } },
+		{ Format = "%+(%d+) Alle Widerst\195\164nde", Types = { "FireResist", "NatureResist", "FrostResist", "ShadowResist", "ArcaneResist" } },
+
+		{ Format = "Waffenschaden %+(%d+)", Types = { "MeleeDmg" } },
+		{ Format = "Erh\195\182ht Eure Trefferchance um (%d+)%%", Types = { "MeleeHit" } },
+		{ Format = "Erh\195\182ht Eure Chance, einen kritischen Schlag zu erzielen, um (%d+)%%", Types = { "MeleeCrit" } },
+		{ Format = "Erh\195\182ht Eure Chance, einem Angriff auszuweichen, um (%d+)%%", Types = { "Dodge" } },
+		{ Format = "Schaden %+(%d+)", Types = { "MeleeDmg" } },
+		{ Format = "(%d+) Blocken", Types = { "BlockAmount" } },
+
+		{ Format = "Erh\195\182ht Angeln um %+(%d+)%.", Types = { "Fishing" } },
+		{ Format = "Angeln %+(%d+)", Types = { "Fishing" } },
+		{ Format = "Kr\195\164uterkunde %+(%d+)", Types = { "Herbalism" } },
+		{ Format = "Bergbau %+(%d+)", Types = { "Mining" } },
+		{ Format = "K\195\188rschnerei %+(%d+)", Types = { "Skinning" } },
+
+		{ Format = "Erh\195\182ht Eure Chance, einen kritischen Treffer durch Zauber zu erzielen, um (%d+)%%", Types = { "SpellCrit" } },
+		{ Format = "Improves your chance to hit with spells by (%d+)%%", Types = { "SpellHit" } },
+		{ Format = "Erh\195\182ht durch Zauber und magische Effekte zugef\195\188gten Schaden und Heilung um bis zu (%d+)", Types = { "SpellDmg", "ShadowDmg", "FireDmg", "FrostDmg", "ArcaneDmg", "NatureDmg", "Healing" } },
+		{ Format = "Erh\195\182ht durch Zauber und Effekte verursachte Heilung um bis zu (%d+)", Types = { "Healing" } },
+		{ Format = "Heilzauber %+(%d+)", Types = { "Healing" } },
+		{ Format = "%+(%d+) Heilzauber", Types = { "Healing" } },
+
+		{ Format = "%+(%d+) Feuerzauberschaden", Types = { "FireDmg" } },
+		{ Format = "%+(%d+) Schattenzauberschaden", Types = { "ShadowDmg" } },
+		{ Format = "%+(%d+) Frostzauberschaden", Types = { "FrostDmg" } },
+		{ Format = "%+(%d+) Arkanzauberschaden", Types = { "ArcaneDmg" } },
+		{ Format = "%+(%d+) Naturzauberschaden", Types = { "NatureDmg" } },
+
+		{ Format = "Increases damage done by Fire spells and effects by up to (%d+)", Types = { "FireDmg" } },
+		{ Format = "Increases damage done by Shadow spells and effects by up to (%d+)", Types = { "ShadowDmg" } },
+		{ Format = "Increases damage done by Frost spells and effects by up to (%d+)", Types = { "FrostDmg" } },
+		{ Format = "Increases damage done by Arcane spells and effects by up to (%d+)", Types = { "ArcaneDmg" } },
+		{ Format = "Increases damage done by Nature spells and effects by up to (%d+)", Types = { "NatureDmg" } },
 	};
 
 	Outfitter_cAgilityStatName = "Beweglichkeit";
@@ -221,20 +222,22 @@ if GetLocale() == "deDE" then
 	Outfitter_cAlteracValleyOutfitDescription = "This outfit will automatically be worn whenever you're in the Alterac Valley battleground";
 	Outfitter_cWarsongGulchOutfitDescription = "This outfit will automatically be worn whenever you're in the Warsong Gulch battleground";
 	Outfitter_cCityOutfitDescription = "This outfit will automatically be worn whenever you're in a friendly major city";
+	Outfitter_cBossOutfitDescription = "This outfit will automatically be worn whenever you target level 63+ mobs";
+	Outfitter_cTrashOutfitDescription = "This outfit will automatically be worn whenever you target level <63 mobs";
 
 	Outfitter_cKeyBinding = "Tastaturbelegung";
 
 	BINDING_HEADER_OUTFITTER_TITLE = Outfitter_cTitle;
 
-	BINDING_NAME_OUTFITTER_OUTFIT1  = "Outfit 1";
-	BINDING_NAME_OUTFITTER_OUTFIT2  = "Outfit 2";
-	BINDING_NAME_OUTFITTER_OUTFIT3  = "Outfit 3";
-	BINDING_NAME_OUTFITTER_OUTFIT4  = "Outfit 4";
-	BINDING_NAME_OUTFITTER_OUTFIT5  = "Outfit 5";
-	BINDING_NAME_OUTFITTER_OUTFIT6  = "Outfit 6";
-	BINDING_NAME_OUTFITTER_OUTFIT7  = "Outfit 7";
-	BINDING_NAME_OUTFITTER_OUTFIT8  = "Outfit 8";
-	BINDING_NAME_OUTFITTER_OUTFIT9  = "Outfit 9";
+	BINDING_NAME_OUTFITTER_OUTFIT1 = "Outfit 1";
+	BINDING_NAME_OUTFITTER_OUTFIT2 = "Outfit 2";
+	BINDING_NAME_OUTFITTER_OUTFIT3 = "Outfit 3";
+	BINDING_NAME_OUTFITTER_OUTFIT4 = "Outfit 4";
+	BINDING_NAME_OUTFITTER_OUTFIT5 = "Outfit 5";
+	BINDING_NAME_OUTFITTER_OUTFIT6 = "Outfit 6";
+	BINDING_NAME_OUTFITTER_OUTFIT7 = "Outfit 7";
+	BINDING_NAME_OUTFITTER_OUTFIT8 = "Outfit 8";
+	BINDING_NAME_OUTFITTER_OUTFIT9 = "Outfit 9";
 	BINDING_NAME_OUTFITTER_OUTFIT10 = "Outfit 10";
 
 	Outfitter_cDisableOutfit = "Outfit abschalten";
@@ -268,7 +271,7 @@ if GetLocale() == "deDE" then
 	Outfitter_cTravelForm = "Reisegestalt";
 	Outfitter_cDireBearForm = "Terrorb\195\164rengestalt";
 	Outfitter_cMoonkinForm = "Moonkin Form";
-	
+
 	Outfitter_cGhostWolfForm = "Geisterwolf";
 
 	Outfitter_cStealth = "Verstohlenheit";
@@ -290,26 +293,26 @@ if GetLocale() == "deDE" then
 	Outfitter_cAccessoryCategoryDescription = "Zusatzgegenst\195\164nde-Outfits haben nur einige festgelegte Inventarslots.  Anders als beim Mix-n-match kannst du so viele Zusatzgegenst\195\164nde-Outfits erstellen und tragen, sie werden alle miteinander verbunden und \195\188ber bestehenden Outfits getragen.";
 	Outfitter_cSpecialCategoryDescription = "Besondere Gelegenheit-Outfits werden automatisch angelegt wenn die Situation es verlangt.  Sie werden \195\188ber allen anderen Outfits getragen.";
 	Outfitter_cOddsNEndsCategoryDescription = "Odds 'n ends ist eine Auflistung der Gegenst\195\164nde, die keinem Outfit zugewiesen sind. Mit dieser Funktion kannst du sicherstellen, dass alle Gegenst\195\164nde ihren Platz haben oder dass du keine unn\195\182tigen Gegenst\195\164nde mit dir herumtr\195\164gst.";
-	
+
 	Outfitter_cRebuildOutfitFormat = "%s ge\195\164ndert.";
-	
+
 	Outfitter_cTranslationCredit = "Deutsche \195\156bersetzung: Ani";
-	
+
 	Outfitter_cSlotEnableTitle = "Slot aktivieren";
 	Outfitter_cSlotEnableDescription = "Aktiviere diese Option, damit der Gegenstand in diesem Slot automatisch angelegt wird wenn du zu diesem Outfit wechselst.  Ist dieser Slot nicht aktiviert, wird er beim Anlegen eines anderen Outfits nicht ver\195\164ndert.";
-	
+
 	Outfitter_cFinger0SlotName = "Erster Finger";
 	Outfitter_cFinger1SlotName = "Zweiter Finger";
-	
+
 	Outfitter_cTrinket0SlotName = "Erstes Schmuckst\195\188ck";
 	Outfitter_cTrinket1SlotName = "Zweites Schmuckst\195\188ck";
-	
+
 	Outfitter_cOutfitCategoryTitle = "Kategorie";
 	Outfitter_cBankCategoryTitle = "Bank";
 	Outfitter_cDepositToBank = "Gegenst\195\164nde im Bankfach ablegen";
 	Outfitter_cDepositUniqueToBank = "Deposit unique items to bank";
 	Outfitter_cWithdrawFromBank = "Gegenst\195\164nde vom Bankfach aufnehmen";
-	
+
 	Outfitter_cMissingItemsLabel = "Fehlende Gegenst\195\164nde: ";
 	Outfitter_cBankedItemsLabel = "Gegenst\195\164nde auf der Bank: ";
 

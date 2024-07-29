@@ -1,6 +1,6 @@
-if GetLocale() == "koKR" then	
+if GetLocale() == "koKR" then
 	Outfitter_cTitle = "Outfitter";
-	Outfitter_cTitleVersion = Outfitter_cTitle.." "..Outfitter_cVersion;
+	Outfitter_cTitleVersion = Outfitter_cTitle .. " " .. Outfitter_cVersion;
 
 	Outfitter_cNameLabel = "이름:";
 	Outfitter_cCreateUsingTitle = "최적화:";
@@ -41,6 +41,8 @@ if GetLocale() == "koKR" then
 	Outfitter_cAVOutfit = "전장: 알터랙 계곡";
 	Outfitter_cWSGOutfit = "전장: 전쟁노래 협곡";
 	Outfitter_cCityOutfit = "마을 주변";
+	Outfitter_cBossOutfit = "Boss Mobs";
+	Outfitter_cTrashOutfit = "Trash Mobs";
 
 	Outfitter_cMountSpeedFormat = "이동 속도 (%d+)%%만큼 증가"; -- For detecting when mounted
 
@@ -89,80 +91,79 @@ if GetLocale() == "koKR" then
 
 	Outfitter_cCarrotOnAStick = "당근 달린 지팡이";
 
-	Outfitter_cItemStatFormats =
-	{
-		{Format = "체력 %+(%d+)", Types = {"Stamina"}},
-		{Format = "지능 %+(%d+)", Types = {"Intellect"}},
-		{Format = "민첩 %+(%d+)", Types = {"Agility"}},
-		{Format = "힘 %+(%d+)", Types = {"Strength"}},
-		{Format = "정신력 %+(%d+)", Types = {"Spirit"}},
-		{Format = "방어도 %+(%d+)", Types = {"Armor"}},
-		{Format = "방어 숙련도 %+(%d+)", Types = {"Defense"}},
-		{Format = "Increased Defense %+(%d+)", Types = {"Defense"}},
-		
-		{Format = "%+(%d+) 체력", Types = {"Stamina"}},
-		{Format = "%+(%d+) 지능", Types = {"Intellect"}},
-		{Format = "%+(%d+) 민첩", Types = {"Agility"}},
-		{Format = "%+(%d+) 힘", Types = {"Strength"}},
-		{Format = "%+(%d+) 정신력", Types = {"Spirit"}},
-		{Format = "(%d+) 방어도", Types = {"Armor"}},
-		{Format = "%+(%d+) 전투력", Types = {"Attack"}},
-		
-		{Format = "모든 능력치 %+(%d+)", Types = {"Stamina", "Intellect", "Agility", "Strength", "Spirit"}},
-		
-		{Format = "마나 %+(%d+)", Types = {"Mana"}},
-		{Format = "생명력 %+(%d+)", Types = {"Health"}},
-		
-		{Format = "매 5초마다 %+(%d+)의 마나", Types = {"ManaRegen"}},
-		{Format = "매 5초마다 (%d+)의 마나가 회복됩니다.", Types = {"ManaRegen"}},
-		
-		{Format = "매 5초마다 %+(%d+)의 생명력", Types = {"HealthRegen"}},
-		{Format = "매 5초마다 (%d+)의 생명력이 회복됩니다.", Types = {"HealthRegen"}},
-		{Format = "Restores (%d+) health per 5 sec.", Types = {"HealthRegen"}},
-		
-		{Format = "최하급 탈것 속도 증가", Value = 3, Types = {"Riding"}},
-		{Format = "미스릴 박차", Value = 3, Types = {"Riding"}},
-		
-		{Format = "화염 저항력 %+(%d+)", Types = {"FireResist"}},
-		{Format = "자연 저항력 %+(%d+)", Types = {"NatureResist"}},
-		{Format = "냉기 저항력 %+(%d+)", Types = {"FrostResist"}},
-		{Format = "암흑 저항력 %+(%d+)", Types = {"ShadowResist"}},
-		{Format = "비전 저항력 %+(%d+)", Types = {"ArcaneResist"}},
-		{Format = "모든 저항력 %+(%d+)", Types = {"FireResist", "NatureResist", "FrostResist", "ShadowResist", "ArcaneResist"}},
-		
-		{Format = "무기 공격력 %+(%d+)", Types = {"MeleeDmg"}},
-		{Format = "무기의 적중률이 (%d+)%%만큼 증가합니다.", Types = {"MeleeHit"}},
-		{Format = "치명타를 적중시킬 확률이 (%d+)%%만큼 증가합니다.", Types = {"MeleeCrit"}},
-		{Format = "공격을 회피할 확률이 (%d+)%%만큼 증가합니다.", Types = {"Dodge"}},
-		{Format = "공격력 %+(%d+)", Types = {"MeleeDmg"}},
-		{Format = "(%d+)의 피해 방어", Types = {"Block"}},
-		{Format = "방어도 %+(%d+)", Types = {"Block"}},
-		{Format = "방패의 피해 방어량이 (%d+)만큼 증가합니다.", Types = {"Block"}},
-		
-		{Format = "낚시 숙련도 %+(%d+)%.", Types = {"Fishing"}},
-		{Format = "낚시 %+(%d+)", Types = {"Fishing"}},
-		{Format = "약초 채집 %+(%d+)", Types = {"Herbalism"}},
-		{Format = "채광 %+(%d+)", Types = {"Mining"}},
-		{Format = "무두질 %+(%d+)", Types = {"Skinning"}},
-		
-		{Format = "주문이 극대화 효과를 낼 확률이(%d+)%%만큼 증가합니다.", Types = {"SpellCrit"}},
-		{Format = "주문의 적중률이 (%d+)%%만큼 증가합니다.", Types = {"SpellHit"}},
-		{Format = "모든 주문 및 효과에 의한 피해와 치유량이 최대 (%d+)만큼 증가합니다.", Types = {"SpellDmg", "ShadowDmg", "FireDmg", "FrostDmg", "ArcaneDmg", "NatureDmg", "Healing"}},
-		{Format = "모든 주문 및 효과에 의한 치유량이 최대 (%d+)만큼 증가합니다.", Types = {"Healing"}},
-		{Format = "치유 주문 %+(%d+)", Types = {"Healing"}},
-		{Format = "%+(%d+) 치유 주문", Types = {"Healing"}},
-		
-		{Format = "%+(%d+) 화염 주문 공격력", Types = {"FireDmg"}},
-		{Format = "%+(%d+) 암흑 주문 공격력", Types = {"ShadowDmg"}},
-		{Format = "%+(%d+) 냉기 주문 공격력", Types = {"FrostDmg"}},
-		{Format = "%+(%d+) 비전 주문 공격력", Types = {"ArcaneDmg"}},
-		{Format = "%+(%d+) 자연 주문 공격력", Types = {"NatureDmg"}},
+	Outfitter_cItemStatFormats = {
+		{ Format = "체력 %+(%d+)", Types = { "Stamina" } },
+		{ Format = "지능 %+(%d+)", Types = { "Intellect" } },
+		{ Format = "민첩 %+(%d+)", Types = { "Agility" } },
+		{ Format = "힘 %+(%d+)", Types = { "Strength" } },
+		{ Format = "정신력 %+(%d+)", Types = { "Spirit" } },
+		{ Format = "방어도 %+(%d+)", Types = { "Armor" } },
+		{ Format = "방어 숙련도 %+(%d+)", Types = { "Defense" } },
+		{ Format = "Increased Defense %+(%d+)", Types = { "Defense" } },
 
-		{Format = "화염 계열의 주문과 효과의 공격력이 최대 (%d+)만큼 증가합니다.", Types = {"FireDmg"}},
-		{Format = "암흑 계열의 주문과 효과의 공격력이 최대 (%d+)만큼 증가합니다.", Types = {"ShadowDmg"}},
-		{Format = "냉기 계열의 주문과 효과의 공격력이 최대 (%d+)만큼 증가합니다.", Types = {"FrostDmg"}},
-		{Format = "비전 계열의 주문과 효과의 공격력이 최대 (%d+)만큼 증가합니다.", Types = {"ArcaneDmg"}},
-		{Format = "자연 계열의 주문과 효과의 공격력이 최대 (%d+)만큼 증가합니다.", Types = {"NatureDmg"}},
+		{ Format = "%+(%d+) 체력", Types = { "Stamina" } },
+		{ Format = "%+(%d+) 지능", Types = { "Intellect" } },
+		{ Format = "%+(%d+) 민첩", Types = { "Agility" } },
+		{ Format = "%+(%d+) 힘", Types = { "Strength" } },
+		{ Format = "%+(%d+) 정신력", Types = { "Spirit" } },
+		{ Format = "(%d+) 방어도", Types = { "Armor" } },
+		{ Format = "%+(%d+) 전투력", Types = { "Attack" } },
+
+		{ Format = "모든 능력치 %+(%d+)", Types = { "Stamina", "Intellect", "Agility", "Strength", "Spirit" } },
+
+		{ Format = "마나 %+(%d+)", Types = { "Mana" } },
+		{ Format = "생명력 %+(%d+)", Types = { "Health" } },
+
+		{ Format = "매 5초마다 %+(%d+)의 마나", Types = { "ManaRegen" } },
+		{ Format = "매 5초마다 (%d+)의 마나가 회복됩니다.", Types = { "ManaRegen" } },
+
+		{ Format = "매 5초마다 %+(%d+)의 생명력", Types = { "HealthRegen" } },
+		{ Format = "매 5초마다 (%d+)의 생명력이 회복됩니다.", Types = { "HealthRegen" } },
+		{ Format = "Restores (%d+) health per 5 sec.", Types = { "HealthRegen" } },
+
+		{ Format = "최하급 탈것 속도 증가", Value = 3, Types = { "Riding" } },
+		{ Format = "미스릴 박차", Value = 3, Types = { "Riding" } },
+
+		{ Format = "화염 저항력 %+(%d+)", Types = { "FireResist" } },
+		{ Format = "자연 저항력 %+(%d+)", Types = { "NatureResist" } },
+		{ Format = "냉기 저항력 %+(%d+)", Types = { "FrostResist" } },
+		{ Format = "암흑 저항력 %+(%d+)", Types = { "ShadowResist" } },
+		{ Format = "비전 저항력 %+(%d+)", Types = { "ArcaneResist" } },
+		{ Format = "모든 저항력 %+(%d+)", Types = { "FireResist", "NatureResist", "FrostResist", "ShadowResist", "ArcaneResist" } },
+
+		{ Format = "무기 공격력 %+(%d+)", Types = { "MeleeDmg" } },
+		{ Format = "무기의 적중률이 (%d+)%%만큼 증가합니다.", Types = { "MeleeHit" } },
+		{ Format = "치명타를 적중시킬 확률이 (%d+)%%만큼 증가합니다.", Types = { "MeleeCrit" } },
+		{ Format = "공격을 회피할 확률이 (%d+)%%만큼 증가합니다.", Types = { "Dodge" } },
+		{ Format = "공격력 %+(%d+)", Types = { "MeleeDmg" } },
+		{ Format = "(%d+)의 피해 방어", Types = { "Block" } },
+		{ Format = "방어도 %+(%d+)", Types = { "Block" } },
+		{ Format = "방패의 피해 방어량이 (%d+)만큼 증가합니다.", Types = { "Block" } },
+
+		{ Format = "낚시 숙련도 %+(%d+)%.", Types = { "Fishing" } },
+		{ Format = "낚시 %+(%d+)", Types = { "Fishing" } },
+		{ Format = "약초 채집 %+(%d+)", Types = { "Herbalism" } },
+		{ Format = "채광 %+(%d+)", Types = { "Mining" } },
+		{ Format = "무두질 %+(%d+)", Types = { "Skinning" } },
+
+		{ Format = "주문이 극대화 효과를 낼 확률이(%d+)%%만큼 증가합니다.", Types = { "SpellCrit" } },
+		{ Format = "주문의 적중률이 (%d+)%%만큼 증가합니다.", Types = { "SpellHit" } },
+		{ Format = "모든 주문 및 효과에 의한 피해와 치유량이 최대 (%d+)만큼 증가합니다.", Types = { "SpellDmg", "ShadowDmg", "FireDmg", "FrostDmg", "ArcaneDmg", "NatureDmg", "Healing" } },
+		{ Format = "모든 주문 및 효과에 의한 치유량이 최대 (%d+)만큼 증가합니다.", Types = { "Healing" } },
+		{ Format = "치유 주문 %+(%d+)", Types = { "Healing" } },
+		{ Format = "%+(%d+) 치유 주문", Types = { "Healing" } },
+
+		{ Format = "%+(%d+) 화염 주문 공격력", Types = { "FireDmg" } },
+		{ Format = "%+(%d+) 암흑 주문 공격력", Types = { "ShadowDmg" } },
+		{ Format = "%+(%d+) 냉기 주문 공격력", Types = { "FrostDmg" } },
+		{ Format = "%+(%d+) 비전 주문 공격력", Types = { "ArcaneDmg" } },
+		{ Format = "%+(%d+) 자연 주문 공격력", Types = { "NatureDmg" } },
+
+		{ Format = "화염 계열의 주문과 효과의 공격력이 최대 (%d+)만큼 증가합니다.", Types = { "FireDmg" } },
+		{ Format = "암흑 계열의 주문과 효과의 공격력이 최대 (%d+)만큼 증가합니다.", Types = { "ShadowDmg" } },
+		{ Format = "냉기 계열의 주문과 효과의 공격력이 최대 (%d+)만큼 증가합니다.", Types = { "FrostDmg" } },
+		{ Format = "비전 계열의 주문과 효과의 공격력이 최대 (%d+)만큼 증가합니다.", Types = { "ArcaneDmg" } },
+		{ Format = "자연 계열의 주문과 효과의 공격력이 최대 (%d+)만큼 증가합니다.", Types = { "NatureDmg" } },
 	};
 
 	Outfitter_cAgilityStatName = "민첩";
@@ -236,20 +237,22 @@ if GetLocale() == "koKR" then
 	Outfitter_cAlteracValleyOutfitDescription = "이 세트는 알터랙 계곡에 있을 때 자동으로 착용 됩니다.";
 	Outfitter_cWarsongGulchOutfitDescription = "이 세트는 전쟁노래 협곡에 있을 때 자동으로 착용 됩니다.";
 	Outfitter_cCityOutfitDescription = "이 세트는 우호적인 대도시에 있을 때 자동으로 착용 됩니다.";
+	Outfitter_cBossOutfitDescription = "This outfit will automatically be worn whenever you target level 63+ mobs";
+	Outfitter_cTrashOutfitDescription = "This outfit will automatically be worn whenever you target level <63 mobs";
 
 	Outfitter_cKeyBinding = "단축키";
 
 	BINDING_HEADER_OUTFITTER_TITLE = Outfitter_cTitle;
 
-	BINDING_NAME_OUTFITTER_OUTFIT1  = "세트 1";
-	BINDING_NAME_OUTFITTER_OUTFIT2  = "세트 2";
-	BINDING_NAME_OUTFITTER_OUTFIT3  = "세트 3";
-	BINDING_NAME_OUTFITTER_OUTFIT4  = "세트 4";
-	BINDING_NAME_OUTFITTER_OUTFIT5  = "세트 5";
-	BINDING_NAME_OUTFITTER_OUTFIT6  = "세트 6";
-	BINDING_NAME_OUTFITTER_OUTFIT7  = "세트 7";
-	BINDING_NAME_OUTFITTER_OUTFIT8  = "세트 8";
-	BINDING_NAME_OUTFITTER_OUTFIT9  = "세트 9";
+	BINDING_NAME_OUTFITTER_OUTFIT1 = "세트 1";
+	BINDING_NAME_OUTFITTER_OUTFIT2 = "세트 2";
+	BINDING_NAME_OUTFITTER_OUTFIT3 = "세트 3";
+	BINDING_NAME_OUTFITTER_OUTFIT4 = "세트 4";
+	BINDING_NAME_OUTFITTER_OUTFIT5 = "세트 5";
+	BINDING_NAME_OUTFITTER_OUTFIT6 = "세트 6";
+	BINDING_NAME_OUTFITTER_OUTFIT7 = "세트 7";
+	BINDING_NAME_OUTFITTER_OUTFIT8 = "세트 8";
+	BINDING_NAME_OUTFITTER_OUTFIT9 = "세트 9";
 	BINDING_NAME_OUTFITTER_OUTFIT10 = "세트 10";
 
 	Outfitter_cDisableOutfit = "세트 사용 안함";
@@ -301,11 +304,11 @@ if GetLocale() == "koKR" then
 	Outfitter_cShamanGhostWolf = "주술사: 늑대 정령";
 
 	Outfitter_cHunterMonkey = "사냥꾼: 원숭이의 상";
-	Outfitter_cHunterHawk =  "사냥꾼: 매의 상";
-	Outfitter_cHunterCheetah =  "사냥꾼: 치타의 상";
-	Outfitter_cHunterPack =  "사냥꾼: 치타 무리의 상";
-	Outfitter_cHunterBeast =  "사냥꾼: 야수의 상";
-	Outfitter_cHunterWild =  "사냥꾼: 야생의 상";
+	Outfitter_cHunterHawk = "사냥꾼: 매의 상";
+	Outfitter_cHunterCheetah = "사냥꾼: 치타의 상";
+	Outfitter_cHunterPack = "사냥꾼: 치타 무리의 상";
+	Outfitter_cHunterBeast = "사냥꾼: 야수의 상";
+	Outfitter_cHunterWild = "사냥꾼: 야생의 상";
 
 	Outfitter_cMageEvocate = "마법사: 환기";
 

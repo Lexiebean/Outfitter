@@ -44,6 +44,8 @@ Outfitter_cWSGOutfit = "Battleground: Warsong Gulch";
 Outfitter_cBROutfit = "Battleground: Blood Ring";
 Outfitter_cSGVOutfit = "Battleground: Sunnyglade Valley";
 Outfitter_cCityOutfit = "Around Town";
+Outfitter_cBossOutfit = "Boss Mobs";
+Outfitter_cTrashOutfit = "Trash Mobs";
 
 Outfitter_cMountSpeedFormat = "Increases speed by (%d+)%%."; -- For detecting when mounted
 
@@ -230,6 +232,8 @@ Outfitter_cRememberVisibilityOffDescription = "Turn this on if you want Outfitte
 Outfitter_cShowHotkeyMessages = "Show key binding outfit changes";
 Outfitter_cShowHotkeyMessagesOnDescription = "Turn this off if you don't want to see a message when you change outfits using a key binding";
 Outfitter_cShowHotkeyMessagesOffDescription = "Turn this on if you want to see a message when you change outfits using a key binding";
+Outfitter_cShowCurrentOutfit = "Display current outfit in small window";
+Outfitter_cHideDisabledOutfits = "Hide disabled outfits from list";
 
 Outfitter_cEquipOutfitMessageFormat = "Outfitter: %s equipped";
 Outfitter_cUnequipOutfitMessageFormat = "Outfitter: %s unequipped";
@@ -255,6 +259,8 @@ Outfitter_cWarsongGulchOutfitDescription = "This outfit will automatically be wo
 Outfitter_cBloodRingOutfitDescription = "This outfit will automatically be worn whenever you're in the Blood Ring battleground";
 Outfitter_cSunnygladeValleyOutfitDescription = "This outfit will automatically be worn whenever you're in the Sunnyglade Valley battleground";
 Outfitter_cCityOutfitDescription = "This outfit will automatically be worn whenever you're in a friendly major city";
+Outfitter_cBossOutfitDescription = "This outfit will automatically be worn whenever you target level 63+ mobs";
+Outfitter_cTrashOutfitDescription = "This outfit will automatically be worn whenever you target level <63 mobs";
 
 Outfitter_cKeyBinding = "Key Binding";
 
