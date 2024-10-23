@@ -1,10 +1,12 @@
 ## Interface: 11200
 ## Notes: Outfitter
 ## Author: |cff5BCEFAL|cffF5A9B8e|cffFFFFFFx|cffF5A9B8i|cff5BCEFAe|r
-## OptionalDeps: TankPoints
+## OptionalDeps: TankPoints, Ace2
 ## RequiredDeps: 
 ## SavedVariablesPerCharacter: gOutfitter_Settings
 
+Libs\AceLibrary\AceLibrary.lua
+Libs\AceOO-2.0\AceOO-2.0.lua
 Libs\AceEvent-2.0\AceEvent-2.0.lua
 
 OutfitterStrings.lua

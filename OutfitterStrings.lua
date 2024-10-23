@@ -46,6 +46,8 @@ Outfitter_cSGVOutfit = "Battleground: Sunnyglade Valley";
 Outfitter_cCityOutfit = "Around Town";
 Outfitter_cBossOutfit = "Boss Mobs";
 Outfitter_cTrashOutfit = "Trash Mobs";
+Outfitter_cCritterOutfit = "Critters";
+
 Outfitter_cBeastTrashOutfit = "Beast Trash Mobs";
 Outfitter_cUndeadTrashOutfit = "Undead Trash Mobs";
 Outfitter_cDemonTrashOutfit = "Demon Trash Mobs";
@@ -267,6 +269,7 @@ Outfitter_cSunnygladeValleyOutfitDescription = "This outfit will automatically b
 Outfitter_cCityOutfitDescription = "This outfit will automatically be worn whenever you're in a friendly major city";
 Outfitter_cBossOutfitDescription = "This outfit will automatically be worn whenever you target level 63+ mobs";
 Outfitter_cTrashOutfitDescription = "This outfit will automatically be worn whenever you target level <63 mobs";
+Outfitter_cCritterOutfitDescription = "This outfit will automatically be worn whenever you target a critter";
 Outfitter_cBeastTrashOutfitDescription = "This outfit will automatically be worn whenever you target beasts level <63 mobs";
 Outfitter_cUndeadTrashOutfitDescription = "This outfit will automatically be worn whenever you target undead level <63 mobs";
 Outfitter_cDemonTrashOutfitDescription = "This outfit will automatically be worn whenever you target demons level <63 mobs";
@@ -349,6 +352,8 @@ Outfitter_cAspectOfThePack = "Aspect of the Pack";
 Outfitter_cAspectOfTheBeast = "Aspect of the Beast";
 Outfitter_cAspectOfTheWild = "Aspect of the Wild";
 Outfitter_cEvocate = "Evocation";
+
+Outfitter_cCritter = "Critter";
 
 Outfitter_cCompleteCategoryDescripton = "Complete outfits have items specified for every slot and will replace all other outfits when worn.";
 Outfitter_cPartialCategoryDescription = "Mix-n-match outfits have only some slots specified, but not all.  When equipped, they are added on top of your selcted Complete outfit, replacing any other Mix-n-match or Accessory outfits selected.";
